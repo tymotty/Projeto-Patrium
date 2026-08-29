@@ -10,24 +10,60 @@
 <!---------------------------------------------------------------------------------->
 <!-------------------------------------NAV------------------------------------------>
 <!---------------------------------------------------------------------------------->
+    <aside class="sidebar">
+        <div class="brand">
+            <h1 id="title">Patrium</h1>
+            <p id="subtitle">Gerenciamento de Patrimônio</p>
+        </div>
+        <nav aria-label="Menu de navegação">
+            <ul>
+                <li><a href="#visao-geral" class="nav-item">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Visão Geral</span>
+                </a></li>
 
-    <nav>
-        <h1 id="title">Patrium</h1>
-        <p id="subtitle">Gerenciamento de Patrimônio</p>
-        <ul>
-            <li><a href="#visao-geral">Visão Geral</a></li>
-            <li><a href="#lucro">Lucro</a></li>
-            <li><a href="#poupanca">Poupança</a></li>
-        </ul>
-        <button type="button" id="adicionar-gasto">
-            + Adicionar Gasto
-        </button>
+                <li><a href="#investimentos" class="nav-item">
+                    <i data-lucide="trending-up"></i>
+                    <span>Investimentos</span>
+                </a></li>
 
-        <ul>
-            <li><a href="#conta">Conta</a></li>
-        </ul>
-    </nav>
+                <li><button class="nav-item" data-section="lancamentos">
+                    <i data-lucide="plus-circle"></i>
+                    <span>Lançamentos</span>
+                </button></li>
 
+                <li><a href="#orcamento" class="nav-item">
+                    <i data-lucide="dollar-sign"></i>
+                    <span>Orçamento</span>
+                </a></li>
+
+                <li><a href="#metas" class="nav-item">
+                    <i data-lucide="target"></i>
+                    <span>Metas</span>
+                </a></li>
+
+                <li><a href="#historico" class="nav-item">
+                    <i data-lucide="clock"></i>
+                    <span>Histórico</span>
+                </a></li>
+
+                <li><a href="#personalizar" class="nav-item">
+                    <i data-lucide="edit"></i>
+                    <span>Personalizar</span>
+                </a></li>
+
+                <li><a href="#configuracoes" class="nav-item">
+                    <i data-lucide="cog"></i>
+                    <span>Configurações</span>
+                </a></li>
+
+                <li><a href="#conta" class="nav-item">
+                    <i data-lucide="user"></i>
+                    <span>Conta</span>
+                </a></li>
+            </ul>
+        </nav>
+    </aside>
 <!---------------------------------------------------------------------------------->
 <!-----------------------------------DASHBOARD-------------------------------------->
 <!---------------------------------------------------------------------------------->
@@ -78,4 +114,10 @@
         </article>
 
     </main>
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
 </body>
