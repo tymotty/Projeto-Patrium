@@ -5,40 +5,70 @@
 }
 
 :root{
-    --cor-background: #0D0F14;
-    --cor-nav: #0B0D11;
-    --cor-widget:#131720;
-    --cor-titleCard:#E8EDF5;
-}
+    --color-bg-dark: #0B0D11;
+    --color-green: #00E593;
+    --color-gray-dark: #4A5568;
+    --color-gray-light: #88969A;
+    --color-hover-bg: #0A1C1B;
 
-html, body {
-    background-color: var(--cor-background);
+    --bg-sidebar: var(--color-bg-dark);
+    --text-accent: var(--color-green);
+    --text-muted: var(--color-gray-dark);
+    --text-nav: var(--color-gray-light);
+    --bg-hover: var(--color-hover-bg);
 }
-nav {
-    background-color: var(--cor-nav);
+body{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
 }
-#dashboard-grid {
-    background-color: var(--cor-background);
-    display: flex;
-    justify-content: center;
+/*---------------------------------------NAV-------------------------------------- */
+.sidebar {
+    background-color: var(--bg-sidebar);
+    width: 250px;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px 0;
 }
-.widget {
-    background-color: var(--cor-widget);
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 0.5rem;
-    width: 80%;
-    max-width: 600px;
-    height: 30%;
+.brand {
+    padding: 0 20px;
+    margin-bottom: 20px;
+
 }
-.card-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--cor-titleCard);
-    
+#title {
+    color: var(--text-accent);
+}
+#subtitle {
+    color: var(--text-muted);
+}
+.nav-item {
+    color: var(--text-nav);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    font:inherit;
+    text-align: left;
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+a {
+    text-decoration: none;
+}
+button {
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+.nav-item:hover,
+.nav-item.active {
+    background-color: var(--bg-hover);
+    color: var(--text-accent);
+    border-left: 3px solid var(--text-accent);
 }
