@@ -24,6 +24,7 @@ body{
 .sidebar {
     background-color: var(--bg-sidebar);
     width: 250px;
+    flex-shrink: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,3 +73,8 @@ button {
     color: var(--text-accent);
     border-left: 3px solid var(--text-accent);
 }
+
+
+/*--------------------------------------DASHBOARD----------------------------------*/
+
+
