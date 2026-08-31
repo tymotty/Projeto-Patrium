@@ -5,17 +5,27 @@
 }
 
 :root{
+    /*---COLORS---*/
     --color-bg-dark: #0B0D11;
     --color-green: #00E593;
     --color-gray-dark: #4A5568;
     --color-gray-light: #88969A;
     --color-hover-bg: #0A1C1B;
+    --color-black-light:#0D0F14;
+    --color-gray:#131720;
+    --color-dark-blue:#232A3A;
+    --color-white:#E8EDF5;
 
+    /*---VARIABLES---*/
     --bg-sidebar: var(--color-bg-dark);
     --text-accent: var(--color-green);
     --text-muted: var(--color-gray-dark);
     --text-nav: var(--color-gray-light);
     --bg-hover: var(--color-hover-bg);
+    --main-dashboard-bg: var(--color-black-light);
+    --widget-bg: var(--color-gray);
+    --border-widget: var(--color-dark-blue);
+    --text-white: var(--color-white);
 }
 body{
     display: flex;
@@ -76,5 +86,47 @@ button {
 
 
 /*--------------------------------------DASHBOARD----------------------------------*/
+.dashboard {
+    background-color: var(--main-dashboard-bg);
+    display: grid;
+    align-content: start;    
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+
+}
+
+
+/*WIDGETS*/
+
+.widget.card,.grafico,.table {
+    background-color: var(--widget-bg);
+    border: 1px solid var(--border-widget);
+    border-radius: 8px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+/*WIDGET CARD */
+
+.widget.card {
+    height: 130px;
+    grid-column: span 1;
+    align-items: center;
+}
+.grafico {
+    height: 450px;
+    grid-column: span 1;
+}
+.table {
+    height: auto;
+    grid-column: span 2;
+}
+
+
+
 
 
