@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="/frontend/src/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrium</title>
+    
 </head>
 <body>
+    
 <!---------------------------------------------------------------------------------->
 <!-------------------------------------NAV------------------------------------------>
 <!---------------------------------------------------------------------------------->
     <aside class="sidebar">
         <div class="brand">
-            <h1 id="title">Patrium</h1>
+            <a href="#visao-geral" class="brand" aria-label="Ir para a visão geral">
+                <h1 id="title">Patrium</h1>
+            </a>
             <p id="subtitle">Gerenciamento de Patrimônio</p>
         </div>
+
+        <!-----MENU----->
         <nav aria-label="Menu de navegação">
             <ul>
                 <li><a href="#visao-geral" class="nav-item">
@@ -111,10 +118,11 @@
             </table>
         </article>
     </main>
-        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+
+    
+<!---Script--->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
 </body>
