@@ -86,6 +86,7 @@ button {
     background-color: var(--bg-hover);
     color: var(--text-accent);
     border-left: 3px solid var(--text-accent);
+    width: calc(100% - 3px); /* Ajusta a largura para compensar a borda */
 }
 
 
@@ -178,7 +179,7 @@ canvas{
 
 @media (max-width: 1100px){
     .dashboard {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr); /*4 colunas: Permite cards em 2 e graficos/tabelas em 2-2-4*/
     }
     .widget.card {
         grid-column: span 2;
@@ -191,12 +192,22 @@ canvas{
     }
 
 }
-@media (max-width: 900px){
-    .sidebar {
-        width: 60px; 
+@media (max-width: 900px){/*900px:Deixar apenas os icons do menu*/
+    .sidebar { 
+        width: 70px;
+        position: fixed;
+        height: 100VH; /* Mantém a altura da sidebar em um viewport */ 
+        top: 0;
+        left: 0;
+        align-items: center; 
     }
-
-    .nav-item span, .brand {
+    .sidebar nav ul {
+        justify-content: space-between;         
+    }
+    .dashboard{
+        margin-left: 70px; /* Ajusta a margem esquerda do dashboard para compensar a largura reduzida da sidebar */
+    }
+    .nav-item span, .brand, #subtitle {
         display: none;
     }
 
@@ -204,7 +215,8 @@ canvas{
 
 
 
-@media (max-width: 700px){
+@media (max-width: 500px){
+    
     body {
         flex-direction: column;
     }
@@ -215,15 +227,12 @@ canvas{
         flex-direction: row;       
         align-items: center;      
         position: fixed;
+        top:auto;
         bottom: 0;
         left: 0;
         padding: 0;
         border-right: none;
         border-top: 1px solid var(--border-widget);
-    }
-
-    .brand {
-        display: none;
     }
 
     .sidebar nav {
@@ -242,7 +251,20 @@ canvas{
         width: auto;           
     }
 
-    .nav-item span,.brand,#nav-metas,#nav-historico,#nav-personalizar,#nav-configuracoes {
-        display: none;
+    .nav-item span, .brand, .nav-hide-mobile { 
+        display: none; /* Oculta a maior parte dos elementos */
+    }
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr); /*2 colunas: Permite cards em 1 e graficos/tabelas em 1-1-2*/
+        margin-left:0;
+    }
+    .widget.card {
+        grid-column: span 1;
+    }
+    .widget.grafico {
+        grid-column: span 2;
+    }
+    .widget.table {
+        grid-column: span 2;
     }
 }
