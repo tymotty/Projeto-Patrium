@@ -75,41 +75,95 @@
 <!-----------------------------------DASHBOARD-------------------------------------->
 <!---------------------------------------------------------------------------------->
     <main id="visao-geral" class="dashboard">
+
+        <!--cards-->
         <article  class="widget card" id="widget-patrimonio">
             <p class="card-title">Patrimônio total</p>
             <h2 class="card-value">R$ 148.320</h2>
             <p class="card-description-positivo"> ▲ 3,4% este mês</p>
         </article>
 
-
+        <!--cards-->
         <article  class="widget card" id="widget-lucro">
             <p class="card-title">Lucro acumulado</p>
             <h2 class="card-value">R$ 21.840</h2>
             <p class="card-description-positivo"> ▲ 12,8% no ano</p>
         </article>
 
-
+        <!--cards-->
         <article  class="widget card" id="widget-poupanca">
             <p class="card-title">Total guardado</p>
             <h2 class="card-value">R$ 52.000</h2>
             <p class="card-description">Meta anual: R$ 60.000</p>
         </article>
 
-
+        <!--cards-->
         <article  class="widget card" id="widget-gastos">
             <p class="card-title">Gastos do mês</p>
             <h2 class="card-value">R$ 3.200</h2>
             <p class="card-description">Média de gastos mensal: R$ 4.000</p>
         </article>
 
+
+
+        
+        <!-- Gráfico de despesas -->
         <article class="widget grafico" id="widget-despesas">
+            <header class="grafico-header">
+                <h3 class="grafico-title">Despesas</h3>
+                <p class="grafico-subtitle">Clique para ver detalhes</p>
+            </header>
+
             <canvas id="grafico-despesas"></canvas>
-            <!-- Gráfico de despesas -->
+
+            <ul class="grafico-legenda">
+                <li></li>
+            </ul>
         </article>
 
+
+
+        <!-- Gráfico de alocação de investimentos -->
         <article class="widget grafico" id="widget-alocacao">
+            <header class="grafico-header">
+                <h3 class="grafico-title">Alocação de Investimentos</h3>
+                <p class="grafico-subtitle">Clique para ver detalhes</p>
+            </header>
+
             <canvas id="grafico-alocacao"></canvas>  
-            <!-- Gráfico de alocação de investimentos -->
+            
+            <ul class="grafico-legenda">
+                <li>
+                    <span class="legenda-color" style="background-color: #00E593"></span>
+                    <span class="legenda-name">Ações BR</span>
+                    <span class="legenda-value">34%</span>
+                </li>
+                <li>
+                    <span class="legenda-color" style="background-color: #3B82F6"></span>
+                    <span class="legenda-name">FIIs</span>
+                    <span class="legenda-value">22%</span>
+                </li>
+                <li>
+                    <span class="legenda-color" style="background-color:#A78BFA"></span>
+                    <span class="legenda-name">Renda Fixa</span>
+                    <span class="legenda-value">18%</span>
+                </li>
+                <li>
+                    <span class="legenda-color" style="background-color: #F43F5E"></span>
+                    <span class="legenda-name">Int'l ETF</span>
+                    <span class="legenda-value">14%</span>
+                </li>
+                <li>
+                    <span class="legenda-color" style="background-color: #FFB800"></span>
+                    <span class="legenda-name">Criptomoedas</span>
+                    <span class="legenda-value">8%</span>
+                </li>
+                <li>
+                    <span class="legenda-color" style="background-color: #8896A8"></span>
+                    <span class="legenda-name">Outros</span>
+                    <span class="legenda-value">4%</span>
+                </li>
+            </ul>
         </article>
         
         <article class="widget table" id="widget-acoes">
