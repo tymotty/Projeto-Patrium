@@ -170,11 +170,17 @@ button {
 /*---GRAFICO CONTENT---*/
 canvas{
     width: 100%;
-    height: 100%;
+    height: 200px;
     display: block;
+    flex-shrink: 0; /* evita que o canvas encolha se o container for pequeno */
+}
+.grafico {
+    display: flex;
+    flex-direction: column;
 }
 .grafico-header {
     margin-bottom: 16px;
+    flex-shrink: 0;
 }
 
 .grafico-title {
@@ -193,7 +199,9 @@ canvas{
     display: flex;
     flex-direction: column;
     gap: 8px;
-    height: 100%;
+    height: auto;
+    flex-shrink: 1; /* ocup ao resto do espaco do container */
+    overflow-y: auto; /* adiciona barra de rolagem se a legenda for maior que o container */
 }
 
 .grafico-legenda li {
@@ -202,25 +210,30 @@ canvas{
     gap: 8px;
 }
 
-.legenda-cor {
+.legenda-color {
     width: 10px;
     height: 10px;
-    border-radius: 50%;
+    border-radius: 25%;
     flex-shrink: 0; /* evita a bolinha "achatar" se o nome for grande */
 }
 
-.legenda-nome {
-    color: var(--text-nav);
+.legenda-name {
+    color: var(--text-muted);
     flex: 1; /* empurra o valor pra direita */
 }
 
-.legenda-valor {
+.legenda-value {
     color: var(--text-white);
     font-weight: 600;
 }
 
 
 /*---TABLE CONTENT---*/
+table {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 
 
 
