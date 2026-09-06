@@ -21,6 +21,7 @@ body{
     --color-gray:#131720;
     --color-dark-blue:#232A3A;
     --color-white:#E8EDF5;
+    --color-red:#F43F5E;
 
     /*---VARIABLES---*/
     --bg-sidebar:       var(--color-bg-dark);
@@ -32,6 +33,7 @@ body{
     --widget-bg:        var(--color-gray);
     --border-widget:    var(--color-dark-blue);
     --text-white:       var(--color-white);
+    --text-danger:       var(--color-red);
 }
 /*---------------------------------------NAV-------------------------------------- */
 .sidebar {
@@ -178,17 +180,17 @@ canvas{
     display: flex;
     flex-direction: column;
 }
-.grafico-header {
+.widget-header { /* Afeta a tabela tmb */
     margin-bottom: 16px;
     flex-shrink: 0;
 }
 
-.grafico-title {
+.widget-title { /* Afeta a tabela tmb */
     color: var(--text-white);
     font-size: 16px;
 }
 
-.grafico-subtitle {
+.widget-subtitle { /* Afeta a tabela tmb */
     color: var(--text-muted);
     font-size: 13px;
 }
@@ -229,13 +231,49 @@ canvas{
 
 
 /*---TABLE CONTENT---*/
+
 table {
     width: 100%;
-    height: 100%;
-    display: block;
+    border-collapse: collapse;
+}
+.positivo { color: var(--text-accent); }
+.negativo { color: var(--text-danger); }
+
+.ativo-table, .preco-table {
+    color: var(--text-white);
+}
+.tipo-table,  .peso-table {
+    color: var(--text-muted);
+}
+
+th, td {
+    padding: 4px 16px;
+    text-align: left;
+    white-space: nowrap; /* nunca quebra linha dentro da célula */
+}
+
+th {
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+tbody tr,thead tr {
+    border-bottom: 1px solid var(--border-widget);
+}
+
+th:nth-child(3), td:nth-child(3), /* Preço */
+th:nth-child(4), td:nth-child(4), /* Var. */
+th:nth-child(5), td:nth-child(5) { /* Peso */
+    text-align: right;
 }
 
 
+@media only screen and (min-width: 1100px) and (max-width: 1575px) { /* 1575px: Oculta Tipo e Peso da tabela */
+    th:nth-child(2), td:nth-child(2), /* Tipo */
+    th:nth-child(5), td:nth-child(5) { /* Peso */
+        display: none;
+    }
+}
 
 
 
@@ -285,7 +323,7 @@ table {
 
 
 
-@media (max-width: 500px){ /*Mobile*/
+@media (max-width: 615px){ /*Mobile*/
     
     body {
         flex-direction: column;

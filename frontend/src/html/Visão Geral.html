@@ -109,9 +109,9 @@
         
         <!-- Gráfico de despesas -->
         <article class="widget grafico" id="widget-despesas">
-            <header class="grafico-header">
-                <h3 class="grafico-title">Despesas</h3>
-                <p class="grafico-subtitle">Clique para ver detalhes</p>
+            <header class="widget-header">
+                <h3 class="widget-title">Despesas</h3>
+                <p class="widget-subtitle">Clique para ver detalhes</p>
             </header>
 
             <canvas id="grafico-despesas"></canvas>
@@ -149,9 +149,9 @@
 
         <!-- Gráfico de alocação de investimentos -->
         <article class="widget grafico" id="widget-alocacao">
-            <header class="grafico-header">
-                <h3 class="grafico-title">Alocação de Investimentos</h3>
-                <p class="grafico-subtitle">Clique para ver detalhes</p>
+            <header class="widget-header">
+                <h3 class="widget-title">Alocação de Investimentos</h3>
+                <p class="widget-subtitle">Clique para ver detalhes</p>
             </header>
 
             <canvas id="grafico-alocacao"></canvas>  
@@ -186,6 +186,10 @@
         </article>
         
         <article class="widget table" id="widget-acoes">
+            <header class="widget-header">
+                <h3 class="widget-title">Carteira</h3>
+                <p class="widget-subtitle">Posições abertas</p>
+            </header>
             <table>
                 <thead>
                     <tr>
@@ -198,56 +202,57 @@
                 </thead>
                 <tbody> 
                     <tr>
-                        <td>PETR4</td>
-                        <td>Ação</td>
-                        <td>R$ 38,42</td>
-                        <td class="positivo">+1,8%</td>
-                        <td>12%</td>
+                        <td class="ativo-table">PETR4</td>
+                        <td class="tipo-table">Ação</td>
+                        <td class="preco-table">R$ 38,42</td>
+                        <td class="var-table positivo">+1,8%</td>
+                        <td class="peso-table">12%</td>
                     </tr>
                 </tbody>
-                    <tbody> 
+
+                <tbody> 
                     <tr>
-                        <td>HGLG11</td>
-                        <td>FII</td>
-                        <td>R$ 162,00</td>
-                        <td class="positivo">+0.4%</td>
-                        <td>10%%</td>
+                        <td class="ativo-table">HGLG11</td>
+                        <td class="tipo-table">FII</td>
+                        <td class="preco-table">R$ 162,00</td>
+                        <td class="var-table positivo">+0.4%</td>
+                        <td class="peso-table">10%</td>
                     </tr>
                 </tbody>
                 <tbody> 
                     <tr>
-                        <td>BOVA11</td>
-                        <td>ETF BR</td>
-                        <td>R$ 112,50</td>
-                        <td class="negativo">-0.6%</td>
-                        <td>8%</td>
+                        <td class="ativo-table">BOVA11</td>
+                        <td class="tipo-table">ETF BR</td>
+                        <td class="preco-table">R$ 112,50</td>
+                        <td class="var-table negativo">-0.6%</td>
+                        <td class="peso-table">8%</td>
                     </tr>
                 </tbody>
                 <tbody> 
                     <tr>
-                        <td>IVVB11</td>
-                        <td>ETF Int</td>
-                        <td>R$ 328,00</td>
-                        <td class="positivo">+1.1%</td>
-                        <td>14%</td>
+                        <td class="ativo-table">IVVB11</td>
+                        <td class="tipo-table">ETF Int</td>
+                        <td class="preco-table">R$ 328,00</td>
+                        <td class="var-table positivo">+1.1%</td>
+                        <td class="peso-table">14%</td>
                     </tr>
                 </tbody>
                 <tbody> 
                     <tr>
-                        <td>BTC</td>
-                        <td>Cripto</td>
-                        <td>R$ 312.400</td>
-                        <td class="negativo">-2.3%</td>
-                        <td>8%</td>
+                        <td class="ativo-table">BTC</td>
+                        <td class="tipo-table">Cripto</td>
+                        <td class="preco-table">R$ 312.400</td>
+                        <td class="var-table negativo">-2.3%</td>
+                        <td class="peso-table">8%</td>
                     </tr>
                 </tbody>
                 <tbody> 
                     <tr>
-                        <td>CDB 14%</td>
-                        <td>RF</td>
-                        <td>R$ 10.000</td>
-                        <td class="positivo">+0.1%</td>
-                        <td>18%</td>
+                        <td class="ativo-table">CDB 14%</td>
+                        <td class="tipo-table">RF</td>
+                        <td class="preco-table">R$ 10.000</td>
+                        <td class="var-table positivo">+0.1%</td>
+                        <td class="peso-table">18%</td>
                     </tr>
                 </tbody>
             </table>
