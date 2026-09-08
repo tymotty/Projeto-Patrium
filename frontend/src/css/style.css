@@ -12,16 +12,16 @@ body{
 
 :root{
     /*---COLORS---*/
-    --color-bg-dark: #0B0D11;
-    --color-green: #00E593;
-    --color-gray-dark: #4A5568;
+    --color-bg-dark:    #0B0D11;
+    --color-green:      #00E593;
+    --color-gray-dark:  #4A5568;
     --color-gray-light: #88969A;
-    --color-hover-bg: #0A1C1B;
+    --color-hover-bg:   #0A1C1B;
     --color-black-light:#0D0F14;
-    --color-gray:#131720;
-    --color-dark-blue:#232A3A;
-    --color-white:#E8EDF5;
-    --color-red:#F43F5E;
+    --color-gray:       #131720;
+    --color-dark-blue:  #232A3A;
+    --color-white:      #E8EDF5;
+    --color-red:        #F43F5E;
 
     /*---VARIABLES---*/
     --bg-sidebar:       var(--color-bg-dark);
@@ -33,7 +33,21 @@ body{
     --widget-bg:        var(--color-gray);
     --border-widget:    var(--color-dark-blue);
     --text-white:       var(--color-white);
-    --text-danger:       var(--color-red);
+    --text-danger:      var(--color-red);
+
+    /*---FONT---*/
+    --font-title-nav:       "Bodoni Moda", serif;
+    --font-subtitle-nav:    "Roboto Mono", monospace;
+    --font-nav-item:        "Inter", sans-serif;
+  
+
+    /*---FONT SIZE---*/
+    --font-xs:   clamp(11px, 1.5vw, 13px);
+    --font-sm:   clamp(14px, 2vw,   16px);
+    --font-base: clamp(14px, 2.5vw, 18px);
+    --font-lg:   clamp(18px, 3.5vw, 22px);
+    --font-xl:   clamp(26px, 4vw,   28px);
+
 }
 /*---------------------------------------NAV-------------------------------------- */
 .sidebar {
@@ -58,18 +72,23 @@ body{
 }
 #title {
     color: var(--text-accent);
+    font-family: var(--font-title-nav);
+    font-size: 28px; /* Tamanho fixo, nao colocar variáveis clamp em nav, o nav ja tem sua proria responsividade */
 }
 #subtitle {
     color: var(--text-muted);
+    font-family: var(--font-subtitle-nav);
+    font-size: 13px;/* Tamanho fixo, nao colocar variáveis clamp em nav, o nav ja tem sua proria responsividade */
 }
 .nav-item {
     color: var(--text-nav);
+    font-family: var(--font-nav-item);
     display: flex;
     align-items: center;
     gap: 10px;
     width: 100%;
     padding: 14px 20px;
-    font-size: 16px;
+    font-size: 16px;/* Tamanho fixo, nao colocar variáveis clamp em nav, o nav ja tem sua proria responsividade */
     font:inherit;
     text-align: left;
 }
@@ -125,7 +144,7 @@ button {
 /*WIDGET CARD */
 
 .widget.card {
-    height: 130px;
+    height: 100%;
     grid-column: span 4;
     align-items: center;
     min-width: 0;
@@ -150,20 +169,22 @@ button {
 
 .card-title {
     color: var(--text-muted);
-    font-size: 14px;
+    font-size: var(--font-sm); /* textos menores, variação mais sutil */
     text-transform: uppercase;
+
 }
 .card-value {
     color: var(--text-white);
-    font-size: 28px;
+    font-size: var(--font-xl); /* os "R$ 148.320" gigantes */
     font-weight: bold;
 }
 .card-description {
     color: var(--text-muted);
-    font-size: 14px;
+    font-size: var(--font-sm); /* textos menores, variação mais sutil */
 }
 .card-description-positivo{
     color: var(--text-accent);
+    font-size: var(--font-sm); /* textos menores, variação mais sutil */
 }
 
 
@@ -187,12 +208,12 @@ canvas{
 
 .widget-title { /* Afeta a tabela tmb */
     color: var(--text-white);
-    font-size: 16px;
+    font-size: var(--font-sm);
 }
 
 .widget-subtitle { /* Afeta a tabela tmb */
     color: var(--text-muted);
-    font-size: 13px;
+    font-size: var(--font-sm);
 }
 
 .grafico-legenda {
@@ -254,7 +275,7 @@ th, td {
 
 th {
     color: var(--text-muted);
-    font-size: 12px;
+    font-size: var(--font-sm);
     text-transform: uppercase;
 }
 tbody tr,thead tr {
@@ -386,5 +407,12 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     }
     .widget.table {
         grid-column: span 2;
+    }
+}
+
+
+@media (max-width: 570px) { /* 550: Oculta Tipo e Peso da tabela */
+    th:nth-child(5), td:nth-child(5) { /* Peso */
+        display: none;
     }
 }
