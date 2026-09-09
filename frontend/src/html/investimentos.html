@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="/frontend/src/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrium</title>
+</head>
+<body>
+     <aside class="sidebar">
+        <div class="brand">
+            <a href="#visao-geral" class="brand" aria-label="Ir para a visão geral">
+                <h1 id="title">Patrium</h1>
+            </a>
+            <p id="subtitle">Gerenciamento de Patrimônio</p>
+        </div>
+
+        <!-----MENU----->
+        <nav aria-label="Menu de navegação">
+            <ul>
+                <li><a href="visao-geral.html" class="nav-item" id="nav-visao-geral">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Visão Geral</span>
+                </a></li>
+
+                <li><a href="investimentos.html" class="nav-item" id="nav-investimentos">
+                    <i data-lucide="trending-up"></i>
+                    <span>Investimentos</span>
+                </a></li>
+
+                <li><button class="nav-item" data-section="lancamentos" id="nav-lancamentos">
+                    <i data-lucide="plus-circle"></i>
+                    <span>Lançamentos</span>
+                </button></li>
+
+                <li><a href="#orcamento" class="nav-item" id="nav-orcamento">
+                    <i data-lucide="dollar-sign"></i>
+                    <span>Orçamento</span>
+                </a></li>
+
+                <li class="nav-hide-mobile"><a href="#metas" class="nav-item" id="nav-metas">
+                    <i data-lucide="target"></i>
+                    <span>Metas</span>
+                </a></li>
+
+                <li class="nav-hide-mobile"><a href="#historico" class="nav-item" id="nav-historico">
+                    <i data-lucide="clock"></i>
+                    <span>Histórico</span>
+                </a></li>
+
+                <li class="nav-hide-mobile"><a href="#personalizar" class="nav-item" id="nav-personalizar">
+                    <i data-lucide="edit"></i>
+                    <span>Personalizar</span>
+                </a></li>
+
+                <li class="nav-hide-mobile"><a href="#configuracoes" class="nav-item" id="nav-configuracoes">
+                    <i data-lucide="cog"></i>
+                    <span>Configurações</span>
+                </a></li>
+
+                <li><a href="#conta" class="nav-item" id="nav-conta">
+                    <i data-lucide="user"></i>
+                    <span>Conta</span>
+                </a></li>
+            </ul>
+        </nav>
+    </aside>
+
+
+
+    <main id="investimentos" class="dashboard">
+        <section class="categoria-investimento">
+            <header class="categoria-header">
+                <span class="legenda-cor" style="background-color: #00E593"></span>
+                <h3>Ações</h3>
+                <span class="badge-percentual">44% do portfólio</span>
+            </header>
+
+            <div class="grid-ativos">
+                <!-- cards de PETR4, VALE3, ITUB4, BOVA11 aqui -->
+            </div>
+        </section>
+    
+    </main>
+    
+    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>lucide.createIcons();</script>
+    
+</body>
+</html>
