@@ -425,7 +425,10 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 
 
 .grid-ativos {
-    display: grid;
+
+}
+#investimentos {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: grid;
     gap: 16px;
 }
