@@ -68,30 +68,44 @@
     </aside>
 
 
+<!-------------------------------------------------------->
+<!--------------------Conteúdo principal------------------>
+<!-------------------------------------------------------->
 
-<main class="dashboard" id="investimentos">
+
+
+
     <!-- 4 cards de métrica do topo (mesmo padrão da Visão Geral) -->
-    <article class="widget card investimentos">
-            <p class="card-title">Total Investido</p>
+<main class="dashboard" id="investimentos">
+ 
+        <article class="widget card investimento">
+            <p class="card-title">Total investido</p>
             <h2 class="card-value">R$ 119.592</h2>
-            <p class="card-description-positivo"> ▲ +8.6% este ano</p>
-    </article>
-    <article class="widget card investimentos">
-            <p class="card-title">Rentabilidade</p>
-            <h2 class="card-value">+8.6%</h2>
-            <p class="card-description-positivo"> ▲ +8.6% este ano</p>
-    </article>
-    <article class="widget card investimentos">
-            <p class="card-title">Patrimônio</p>
-            <h2 class="card-value">R$ 148.320</h2>
-            <p class="card-description-positivo"> ▲ +12.3% este ano</p>
-    </article>
-    <article class="widget card investimentos">
-            <p class="card-title">Lucro Realizado</p>
-            <h2 class="card-value">R$ 12.345</h2>
-            <p class="card-description-positivo"> ▲ +15.7% este ano</p>
-    </article>
+            <p class="card-description positivo">▲ 8,6% este ano</p>
+        </article>
 
+        <article class="widget card investimento">
+            <p class="card-title">Lucro não realiz.</p>
+            <h2 class="card-value">R$ 12.340</h2>
+            <p class="card-description positivo">▲ 10,3% da posição</p>
+        </article>
+
+        <article class="widget card investimento">
+            <p class="card-title">Dividendos</p>
+            <h2 class="card-value">R$ 890</h2>
+            <p class="card-description">recebidos este mês</p>
+        </article>
+
+        <article class="widget card investimento">
+            <p class="card-title">Ativos</p>
+            <h2 class="card-value">13</h2>
+            <p class="card-description">posições abertas</p>
+        </article>
+
+
+
+
+        
     <!-- Categoria: Ações -->
     <section class="categoria-investimento">
         <header class="categoria-header">
@@ -101,8 +115,35 @@
         </header>
 
         <div class="grid-ativos">
+
+            <article class="card-ativo">
+                <header class="ativo-header">
+                    <div>
+                        <h3 class="ativo-ticker">PETR4</h3>
+                        <p class="ativo-nome">Petrobras</p>
+                    </div>
+                    <span class="badge-variacao positivo">▲ 1,8%</span>
+                </header>
+
+                <div class="ativo-dados">
+                    <div>
+                        <p class="ativo-label">Cotação</p>
+                        <p class="ativo-valor">R$ 38,42</p>
+                    </div>
+                    <div>
+                        <p class="ativo-label">Posição</p>
+                        <p class="ativo-valor ativo-posicao">R$ 9.605</p>
+                    </div>
+                </div>
+
+                <progress class="ativo-progresso" value="60" max="100"></progress>
+            </article>
+
+            <!-- próximos cards de ativo (VALE3, ITUB4, BOVA11) entram aqui, mesma estrutura -->
+
         </div>
     </section>
+
 
     <!-- Categoria: FIIs -->
     <section class="categoria-investimento">
@@ -113,8 +154,15 @@
         </header>
 
         <div class="grid-ativos">
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
         </div>
     </section>
+
+
+
 
     <!-- Categoria: Cripto -->
     <section class="categoria-investimento">
@@ -125,8 +173,15 @@
         </header>
 
         <div class="grid-ativos">
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
         </div>
     </section>
+
+
+
 
     <!-- Categoria: Renda Fixa -->
     <section class="categoria-investimento">
@@ -137,6 +192,10 @@
         </header>
 
         <div class="grid-ativos">
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
+            <article class="card-ativo">...</article>
         </div>
     </section>
 

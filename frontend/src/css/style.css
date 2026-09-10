@@ -423,12 +423,16 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 /*---------------------------------------------------------------------------------*/
 
 
-
-.grid-ativos {
-
-}
 #investimentos {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     display: grid;
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+
 }
+
+.widget.card.investimento {
+    grid-column: span 1;
+}
+
