@@ -448,8 +448,8 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     width: 100%; 
 }
 .categoria-header {
-    color: var(--text-muted);
-    font-size: var(--font-sm);
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     margin-bottom: 8px;
 }
@@ -457,5 +457,33 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
     gap: 20px;
-    
+}
+
+.categoria-nome{
+    color: var(--text-white);
+    font-size:var(--font-sm);
+    text-transform: none;
+}
+.badge-percentual{
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: none;
+        font-size: var(--font-xs);
+
+}
+#badge-acoes{
+    background-color: #0C2421;
+    color: var(--text-accent);
+}
+#badge-FIIs {
+    background-color: #131B2A;
+    color: #3B82F6;
+}
+#badget-cripto{
+    background-color:#232118;
+    color: #FFB800;
+}
+#badge-renda-fixa {
+    background-color:#24151C;
+    color: #F43F5E;
 }

@@ -1,0 +1,1 @@
+- [ ] style="background-color de legenda-color como fonte unica
