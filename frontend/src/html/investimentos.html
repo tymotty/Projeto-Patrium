@@ -77,7 +77,7 @@
 
     <!-- 4 cards de métrica do topo (mesmo padrão da Visão Geral) -->
 <main class="dashboard" id="investimentos">
- 
+    <section class="informacoes-principais-inves">
         <article class="widget card investimento">
             <p class="card-title">Total investido</p>
             <h2 class="card-value">R$ 119.592</h2>
@@ -101,7 +101,7 @@
             <h2 class="card-value">13</h2>
             <p class="card-description">posições abertas</p>
         </article>
-
+    </section>
 
 
 
@@ -115,7 +115,7 @@
         </header>
 
         <div class="grid-ativos">
-
+            <!-- Card 1: PETR4 -->
             <article class="card-ativo">
                 <header class="ativo-header">
                     <div>
@@ -137,14 +137,88 @@
                 </div>
 
                 <progress class="ativo-progresso" value="60" max="100"></progress>
+            </article>  
+            
+            
+            <!-- Card 2: VALE3 -->
+            <article class="card-ativo">
+                <header class="ativo-header">
+                    <div>
+                        <h3 class="ativo-ticker">VALE3</h3>
+                        <p class="ativo-nome">Vale</p>
+                    </div>
+                    <span class="badge-variacao negativo">▼ -0,4%</span>
+                </header>
+
+                <div class="ativo-dados">
+                    <div>
+                        <p class="ativo-label">Cotação</p>
+                        <p class="ativo-valor">R$ 64,10</p>
+                    </div>
+                    <div>
+                        <p class="ativo-label">Posição</p>
+                        <p class="ativo-valor ativo-posicao">R$ 6.410</p>
+                    </div>
+                </div>
+
+                <progress class="ativo-progresso" value="30" max="100"></progress>
             </article>
 
-            <!-- próximos cards de ativo (VALE3, ITUB4, BOVA11) entram aqui, mesma estrutura -->
+            <!-- Card 3: ITUB4 -->
+            <article class="card-ativo">
+                <header class="ativo-header">
+                    <div>
+                        <h3 class="ativo-ticker">ITUB4</h3>
+                        <p class="ativo-nome">Itaú Unibanco</p>
+                    </div>
+                    <span class="badge-variacao positivo">▲ 0,9%</span>
+                </header>
+                <div class="ativo-dados">
+                    <div>
+                        <p class="ativo-label">Cotação</p>
+                        <p class="ativo-valor">R$ 32,50</p>
+                    </div>
+                    <div>
+                        <p class="ativo-label">Posição</p>
+                        <p class="ativo-valor ativo-posicao">R$ 3.250</p>
+                    </div>
+                </div>
+
+                <progress class="ativo-progresso" value="40" max="100"></progress>
+            </article>
+
+
+            <!-- Card 4: BOVA11 -->
+            <article class="card-ativo">
+                <header class="ativo-header">
+                    <div>
+                        <h3 class="ativo-ticker">BOVA11</h3>
+                        <p class="ativo-nome">Shares IBOVESPA</p>
+                    </div>
+                    <span class="badge-variacao negativo">▼ -0,6%</span>
+                </header>
+
+                <div class="ativo-dados">
+                    <div>
+                        <p class="ativo-label">Cotação</p>
+                        <p class="ativo-valor">R$ 112,50</p>
+                    </div>
+                    <div>
+                        <p class="ativo-label">Posição</p>
+                        <p class="ativo-valor ativo-posicao">R$ 11.250</p>
+                    </div>
+                </div>
+
+                <progress class="ativo-progresso" value="50" max="100"></progress>
+            </article>
 
         </div>
     </section>
 
 
+
+
+    
     <!-- Categoria: FIIs -->
     <section class="categoria-investimento">
         <header class="categoria-header">

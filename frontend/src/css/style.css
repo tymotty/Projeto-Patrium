@@ -115,7 +115,12 @@ button {
 }
 
 
+
+
+/*---------------------------------------------------------------------------------*/
 /*--------------------------------------DASHBOARD----------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
 .dashboard {
     background-color: var(--main-dashboard-bg);
     display: grid;
@@ -129,9 +134,9 @@ button {
 }
 
 
-/*WIDGETS*/
+/*WIDGETS - serve para todos os widgets do dashboard */
 
-.widget.card,.grafico,.table {
+.widget.card,.grafico,.table,.card-ativo {
     background-color: var(--widget-bg);
     border: 1px solid var(--border-widget);
     border-radius: 8px;
@@ -150,12 +155,16 @@ button {
     min-width: 0;
     min-height: 0;
 }
+
+/*WIDGET GRAFICO */
 .grafico {
     height: 450px;
     grid-column: span 5;
     min-width: 0;
     min-height: 0;
 }
+
+/*WIDGET TABLE */
 .table {
     height: auto;
     grid-column: span 6;
@@ -425,14 +434,28 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 
 #investimentos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: none;
     gap: 20px;
     padding: 40px;
     width: 100%;
 
 }
 
-.widget.card.investimento {
-    grid-column: span 1;
+.informacoes-principais-inves{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
+    gap: 20px;
+    width: 100%; 
 }
-
+.categoria-header {
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.grid-ativos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
+    gap: 20px;
+    
+}
