@@ -14,17 +14,21 @@ body{
     /*---COLORS---*/
     --color-bg-dark:    #0B0D11;
     --color-black-light:#0D0F14;
-    --color-dark-blue:  #232A3A;
     --color-hover-bg:   #0A1C1B;
     --color-gray:       #131720;
     --color-gray-dark:  #4A5568;
     --color-gray-light: #88969A;
     --color-white:      #E8EDF5;
-    --color-dark-green: #112C2D;
+    --color-darker-green:#112C2D;
+    --color-dark-green :#08A97E;        
     --color-green:      #00E593;
-    --color-dark-red:   #2B1D28;
+    --color-darker-red:   #2B1D28;
+    --color-dark-red:   #BB3F58;
     --color-red:        #F43F5E;
+    --color-darker-blue:#232A3A;
+    --color-dark-blue:  #3E6CC1;
     --color-blue:       #3B82F6;
+    --color-dark-gold:  #B4953C;
     --color-gold:       #FFB800;   
      
 
@@ -36,7 +40,7 @@ body{
     --bg-hover:         var(--color-hover-bg);
     --main-dashboard-bg:var(--color-black-light);
     --widget-bg:        var(--color-gray);
-    --border-widget:    var(--color-dark-blue);
+    --border-widget:    var(--color-darker-blue);
     --text-white:       var(--color-white);
     --text-danger:      var(--color-red);
 
@@ -444,7 +448,6 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     gap: 20px;
     padding: 40px;
     width: 100%;
-
 }
 
 /*Pai dos cards principais*/
@@ -452,6 +455,11 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
+}
+
+/*Card Principal*/
+.widget.card.investimento{
+    grid-column: span 1; 
 }
 
 /*Valor cards principal*/
@@ -472,6 +480,7 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     font-size:var(--font-sm);
     text-transform: none;
 }
+
 /*Porcentagem de catalago*/
 .badge-percentual{
     padding: 2px 6px;
@@ -479,9 +488,10 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     text-transform: none;
     font-size: var(--font-xs);
 }
+
 /*% do portifolio de categorias*/
 #badge-acoes{
-    background-color:var(--color-dark-green);
+    background-color:var(--color-darker-green);
     color: var(--color-green);
 }
 #badge-FIIs {
@@ -493,7 +503,7 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     color: var(--color-gold);
 }
 #badge-renda-fixa {
-    background-color:var(--color-dark-red);
+    background-color:var(--color-darker-red);
     color: var(--color-red);
 }
 
@@ -501,14 +511,15 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 /*Pai dos cards*/
 .grid-ativos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
     gap: 20px;
 }
 /*Card*/
-.widget.card.investimento{
-    grid-column: span 1;
+.card-ativo{
+    display: flex;
+    flex-direction: column;
+    gap:9px ;
 }
-
 
 /*header dos cards: titulo(dividendo),subtitulo(empresa) e variavel*/
 .ativo-header{
@@ -519,6 +530,7 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 .ativo-dados {
     display: flex;
     justify-content: space-between;
+    margin-top: 16px;
 }
 /*nome(empresa), cotacao e posicao*/
 .ativo-nome, .ativo-label{
@@ -545,20 +557,20 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     border-radius: 6px;
     padding: 3px;
     font-size: var(--font-sm);
-    height: 100%;
+    height: 23px;
     width: 75px;
     justify-content: center;
     display: flex;
 }
 
-/*variavel (por conta da cor tem um separado)*/ 
+/* variavel (por conta da cor tem um separado)*/ 
 .badge-variacao.positivo{
-    background-color: var(--color-dark-green);
+    background-color: var(--color-darker-green);
 }
 .badge-variacao.negativo{
-    background-color: var(--color-dark-red);
+    background-color: var(--color-darker-red);
 }
-/*valor total posicao (tem que ter um de cada)*/
+/* valor total posicao (tem que ter um de cada)*/
 .ativo-acoes {
     color: var(--color-green);
 }
@@ -572,8 +584,38 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     color: var(--color-red);
 }
 
+/*---Barra de progresso---*/
+progress {
+    -webkit-appearance: none; /* remove o estilo nativo do navegador antes de customizar */
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    border: none;
+    border-radius: 4px;
+    overflow: hidden; /* garante que o preenchimento respeite o border-radius */
+}
 
+/* O "trilho" de fundo */
+progress::-webkit-progress-bar {
+    background-color: var(--border-widget); 
+}
 
+/* O preenchimento: Acoes */
+.ativo-progresso.acoes::-webkit-progress-value {
+    background-color: var(--color-dark-green);
+}
+/*FIIs */
+.ativo-progresso.FIIs::-webkit-progress-value {
+    background-color: var(--color-dark-blue);
+}
+/*cripto*/
+.ativo-progresso.cripto::-webkit-progress-value {
+    background-color: var(--color-dark-gold);
+}
+/*Renda Fixa*/
+.ativo-progresso.Renda-fixa::-webkit-progress-value {
+    background-color: var(--color-dark-red); 
+}
 
 
 @media (max-width: 1087px){
@@ -582,6 +624,8 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     }
 }
 
-@media (max-width: 675px){ /*deixar os cards de categoria em duas colunas*/
-
+@media (max-width: 685px){ /*deixar os cards de categoria em duas colunas*/
+    .grid-ativos {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
 }
