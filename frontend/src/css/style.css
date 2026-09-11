@@ -447,47 +447,38 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 
 }
 
-
+/*Pai dos cards principais*/
 .informacoes-principais-inves{
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
 }
-.widget.card.investimento{
-    grid-column: span 1;
+
+/*Valor cards principal*/
+.card-value.investimento{
+    font-size: var(--font-xg);
 }
 
+/*Titulo catalago*/
 .categoria-header {
     display: flex;
     align-items: center;
     text-transform: uppercase;
     margin-bottom: 8px;
 }
-
-
-.grid-ativos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
-    gap: 20px;
-}
-
-
+/*Titulo de catalago*/
 .categoria-nome{
     color: var(--text-white);
     font-size:var(--font-sm);
     text-transform: none;
 }
-
-
+/*Porcentagem de catalago*/
 .badge-percentual{
     padding: 2px 6px;
     border-radius: 4px;
     text-transform: none;
     font-size: var(--font-xs);
-
 }
-
-
 /*% do portifolio de categorias*/
 #badge-acoes{
     background-color:var(--color-dark-green);
@@ -507,38 +498,49 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 }
 
 
+/*Pai dos cards*/
+.grid-ativos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
+    gap: 20px;
+}
+/*Card*/
+.widget.card.investimento{
+    grid-column: span 1;
+}
 
-/*conteudo*/
+
+/*header dos cards: titulo(dividendo),subtitulo(empresa) e variavel*/
 .ativo-header{
     display: flex;
     justify-content: space-between;
 }
+/*conteudo do cards: cotacao e posicao */
 .ativo-dados {
     display: flex;
     justify-content: space-between;
 }
-
-
+/*nome(empresa), cotacao e posicao*/
 .ativo-nome, .ativo-label{
     color: var(--color-gray-dark);
     font-size: var(--font-xs);
 }
+/*cotacao e posicao*/
 .ativo-label{
     text-transform: uppercase;
 }
-
+/*Nome divodendo e valor cotacao*/
 .ativo-ticker, .ativo-valor {
     color: var(--color-white);
     font-size: var(--font-base);
 }
-
-
+/*barra de progresso*/
 .ativo-progresso{
     width: 100%;
 }
 
 
-
+/*variavel*/
 .badge-variacao{
     border-radius: 6px;
     padding: 3px;
@@ -549,14 +551,14 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     display: flex;
 }
 
-/*por conta da cor tem um separado*/ 
+/*variavel (por conta da cor tem um separado)*/ 
 .badge-variacao.positivo{
     background-color: var(--color-dark-green);
 }
 .badge-variacao.negativo{
     background-color: var(--color-dark-red);
 }
-
+/*valor total posicao (tem que ter um de cada)*/
 .ativo-acoes {
     color: var(--color-green);
 }
@@ -571,9 +573,6 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 }
 
 
-.card-value.investimento{
-    font-size: var(--font-xg);
-}
 
 
 
@@ -583,3 +582,6 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     }
 }
 
+@media (max-width: 675px){ /*deixar os cards de categoria em duas colunas*/
+
+}
