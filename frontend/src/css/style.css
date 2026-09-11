@@ -13,15 +13,20 @@ body{
 :root{
     /*---COLORS---*/
     --color-bg-dark:    #0B0D11;
-    --color-green:      #00E593;
+    --color-black-light:#0D0F14;
+    --color-dark-blue:  #232A3A;
+    --color-hover-bg:   #0A1C1B;
+    --color-gray:       #131720;
     --color-gray-dark:  #4A5568;
     --color-gray-light: #88969A;
-    --color-hover-bg:   #0A1C1B;
-    --color-black-light:#0D0F14;
-    --color-gray:       #131720;
-    --color-dark-blue:  #232A3A;
     --color-white:      #E8EDF5;
+    --color-dark-green: #112C2D;
+    --color-green:      #00E593;
+    --color-dark-red:   #2B1D28;
     --color-red:        #F43F5E;
+    --color-blue:       #3B82F6;
+    --color-gold:       #FFB800;   
+     
 
     /*---VARIABLES---*/
     --bg-sidebar:       var(--color-bg-dark);
@@ -459,6 +464,7 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     gap: 20px;
 }
 
+
 .categoria-nome{
     color: var(--text-white);
     font-size:var(--font-sm);
@@ -468,22 +474,70 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     padding: 2px 6px;
     border-radius: 4px;
     text-transform: none;
-        font-size: var(--font-xs);
+    font-size: var(--font-xs);
 
 }
+
+
+/*% do portifolio de categorias*/
 #badge-acoes{
-    background-color: #0C2421;
-    color: var(--text-accent);
+    background-color:var(--color-dark-green);
+    color: var(--color-green);
 }
 #badge-FIIs {
     background-color: #131B2A;
-    color: #3B82F6;
+    color: var(--color-blue);
 }
 #badget-cripto{
     background-color:#232118;
-    color: #FFB800;
+    color: var(--color-gold);
 }
 #badge-renda-fixa {
-    background-color:#24151C;
-    color: #F43F5E;
+    background-color:var(--color-dark-red);
+    color: var(--color-red);
 }
+
+
+
+
+.ativo-nome, .ativo-label{
+    color: var(--color-gray-dark);
+    font-size: var(--font-xs);
+}
+.ativo-label{
+    text-transform: uppercase;
+}
+
+.ativo-ticker, .ativo-valor {
+    color: var(--color-white);
+    font-size: var(--font-base);
+}
+
+
+.badge-variacao.positivo{
+    background-color: var(--color-dark-green);
+    border-radius: 6px;
+    padding: 3px;
+    font-size: var(--font-sm);
+}
+.badge-variacao.negativo{
+    background-color: var(--color-dark-red);
+    border-radius: 6px;
+    padding: 3px;
+    font-size: var(--font-sm);
+}
+
+.ativo-acoes {
+    color: var(--color-green);
+}
+.ativo-FIIs {
+    color: var(--color-blue);
+}
+.ativo-cripto{
+    color: var(--color-gold) ;
+}
+.ativo-renda-fixa {
+    color: var(--color-red);
+}
+
+
