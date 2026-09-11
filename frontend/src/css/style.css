@@ -51,6 +51,7 @@ body{
     --font-sm:   clamp(14px, 2vw,   16px);
     --font-base: clamp(14px, 2.5vw, 18px);
     --font-lg:   clamp(18px, 3.5vw, 22px);
+    --font-xg:   clamp(22px, 3vw,   28px);
     --font-xl:   clamp(26px, 4vw,   28px);
 
 }
@@ -122,9 +123,9 @@ button {
 
 
 
-/*---------------------------------------------------------------------------------*/
-/*--------------------------------------DASHBOARD----------------------------------*/
-/*---------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*-------------------------------------DASHBOARD----------------------------------*/
+/*--------------------------------------------------------------------------------*/
 
 .dashboard {
     background-color: var(--main-dashboard-bg);
@@ -183,7 +184,7 @@ button {
 
 .card-title {
     color: var(--text-muted);
-    font-size: var(--font-sm); /* textos menores, variação mais sutil */
+    font-size: var(--font-xs); /* textos menores, variação mais sutil */
     text-transform: uppercase;
 
 }
@@ -432,11 +433,11 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 }
 
 
-/*---------------------------------------------------------------------------------*/
-/*------------------------------Investimentos--------------------------------*/
-/*---------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*---------------------------------Investimentos----------------------------------*/
+/*--------------------------------------------------------------------------------*/
 
-
+/*Pai de todos*/
 #investimentos {
     display: grid;
     grid-template-columns: none;
@@ -446,21 +447,27 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 
 }
 
+
 .informacoes-principais-inves{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
-    width: 100%; 
 }
+.widget.card.investimento{
+    grid-column: span 1;
+}
+
 .categoria-header {
     display: flex;
     align-items: center;
     text-transform: uppercase;
     margin-bottom: 8px;
 }
+
+
 .grid-ativos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta automaticamente o número de colunas com base no tamanho da tela */
     gap: 20px;
 }
 
@@ -470,6 +477,8 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     font-size:var(--font-sm);
     text-transform: none;
 }
+
+
 .badge-percentual{
     padding: 2px 6px;
     border-radius: 4px;
@@ -499,6 +508,16 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 
 
 
+/*conteudo*/
+.ativo-header{
+    display: flex;
+    justify-content: space-between;
+}
+.ativo-dados {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .ativo-nome, .ativo-label{
     color: var(--color-gray-dark);
@@ -514,17 +533,28 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 }
 
 
-.badge-variacao.positivo{
-    background-color: var(--color-dark-green);
+.ativo-progresso{
+    width: 100%;
+}
+
+
+
+.badge-variacao{
     border-radius: 6px;
     padding: 3px;
     font-size: var(--font-sm);
+    height: 100%;
+    width: 75px;
+    justify-content: center;
+    display: flex;
+}
+
+/*por conta da cor tem um separado*/ 
+.badge-variacao.positivo{
+    background-color: var(--color-dark-green);
 }
 .badge-variacao.negativo{
     background-color: var(--color-dark-red);
-    border-radius: 6px;
-    padding: 3px;
-    font-size: var(--font-sm);
 }
 
 .ativo-acoes {
@@ -540,4 +570,16 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     color: var(--color-red);
 }
 
+
+.card-value.investimento{
+    font-size: var(--font-xg);
+}
+
+
+
+@media (max-width: 1087px){
+    .informacoes-principais-inves{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 
