@@ -17,15 +17,16 @@ body{
     --color-hover-bg:   #0A1C1B;
     --color-gray:       #131720;
     --color-gray-dark:  #4A5568;
-    --color-gray-light: #88969A;
+    --color-slate:      #8896A8;
     --color-white:      #E8EDF5;
     --color-darker-green:#112C2D;
     --color-dark-green :#08A97E;        
     --color-green:      #00E593;
-    --color-darker-red:   #2B1D28;
+    --color-darker-red: #2B1D28;
     --color-dark-red:   #BB3F58;
     --color-red:        #F43F5E;
-    --color-darker-blue:#232A3A;
+    --color-darker-blue:#232A3A; 
+    --color-blue-gray:  #1A1F2E;
     --color-dark-blue:  #3E6CC1;
     --color-blue:       #3B82F6;
     --color-dark-gold:  #B4953C;
@@ -36,7 +37,7 @@ body{
     --bg-sidebar:       var(--color-bg-dark);
     --text-accent:      var(--color-green);
     --text-muted:       var(--color-gray-dark);
-    --text-nav:         var(--color-gray-light);
+    --text-nav:         var(--color-slate);
     --bg-hover:         var(--color-hover-bg);
     --main-dashboard-bg:var(--color-black-light);
     --widget-bg:        var(--color-gray);
@@ -437,9 +438,12 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
 }
 
 
+
 /*--------------------------------------------------------------------------------*/
 /*---------------------------------Investimentos----------------------------------*/
 /*--------------------------------------------------------------------------------*/
+
+
 
 /*Pai de todos*/
 #investimentos {
@@ -604,15 +608,15 @@ progress::-webkit-progress-bar {
 .ativo-progresso.acoes::-webkit-progress-value {
     background-color: var(--color-dark-green);
 }
-/*FIIs */
+/* FIIs */
 .ativo-progresso.FIIs::-webkit-progress-value {
     background-color: var(--color-dark-blue);
 }
-/*cripto*/
+/* Cripto*/
 .ativo-progresso.cripto::-webkit-progress-value {
     background-color: var(--color-dark-gold);
 }
-/*Renda Fixa*/
+/* Renda Fixa*/
 .ativo-progresso.Renda-fixa::-webkit-progress-value {
     background-color: var(--color-dark-red); 
 }
@@ -626,6 +630,74 @@ progress::-webkit-progress-bar {
 
 @media (max-width: 685px){ /*deixar os cards de categoria em duas colunas*/
     .grid-ativos {
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    }
 }
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*------------------------------------Lancamento----------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/*Pai de todos*/
+.modal-overlay {
+    display: none; /* escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* fundo escurecido atrás do modal */
+    align-items: center;
+    justify-content: center;
+}
+
+/*pai*/
+.modal-conteudo{
+    background-color: var(--color-gray);
+    width: 450px;
+    height: 320px;
+    border-radius: 13px;
+    border: solid 1px var(--border-widget);
+    padding: 30px;
+}
+/*header (titulo, subtitulo e botao)*/
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+
+}
+/*titulo*/
+.titule.lancamento {
+    color: var(--text-white);
+    font-size: var(--font-lg);
+}
+
+/*Subtitulo*/
+.subtitule.lancamento{
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+}
+
+/*botao*/
+.btn-fechar-modal{
+    height: 30px;
+    width: 30px;
+    border: solid 1px var(--border-widget);
+    border-radius: 7px;
+    background-color: var(--color-blue-gray);
+    color: var(--color-slate);
+}
+.modal-overlay.aberto {
+    display: flex; /* quando o JS adicionar essa classe, o modal aparece centralizado */
+
+}
+.modal-opcoes{
+    grid-template-columns: repeat(2,1fr);
+}
+.opcao-lancamento {
+    grid-column: span;
 }
