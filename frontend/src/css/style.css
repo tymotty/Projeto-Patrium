@@ -29,8 +29,11 @@ body{
     --color-blue-gray:  #1A1F2E;
     --color-dark-blue:  #3E6CC1;
     --color-blue:       #3B82F6;
+    --color-darker-gold:#282823;
     --color-dark-gold:  #B4953C;
-    --color-gold:       #FFB800;   
+    --color-gold:       #FFB800;
+    --color-darker-purple:#212235;
+    --color-purple:     #A78BFA;
      
 
     /*---VARIABLES---*/
@@ -503,7 +506,7 @@ th:nth-child(5), td:nth-child(5) { /* Peso */
     color: var(--color-blue);
 }
 #badget-cripto{
-    background-color:#232118;
+    background-color:var(--color-darker-gold);
     color: var(--color-gold);
 }
 #badge-renda-fixa {
@@ -668,7 +671,6 @@ progress::-webkit-progress-bar {
 .modal-header {
     display: flex;
     justify-content: space-between;
-
 }
 /*titulo*/
 .titule.lancamento {
@@ -681,8 +683,7 @@ progress::-webkit-progress-bar {
     color: var(--text-muted);
     font-size: var(--font-sm);
 }
-
-/*botao*/
+/*botao fechar*/
 .btn-fechar-modal{
     height: 30px;
     width: 30px;
@@ -691,13 +692,72 @@ progress::-webkit-progress-bar {
     background-color: var(--color-blue-gray);
     color: var(--color-slate);
 }
+
+
 .modal-overlay.aberto {
     display: flex; /* quando o JS adicionar essa classe, o modal aparece centralizado */
+}
 
-}
+
+/*Pai Opacoes de lancamento*/
 .modal-opcoes{
+    display: grid;
     grid-template-columns: repeat(2,1fr);
+    justify-content: center;
 }
+/*Btn Opacoes*/
 .opcao-lancamento {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    padding: 12px;
     grid-column: span;
+    width: 185px;
+    height: 100px;
+    background-color: var(--color-blue-gray);
+    border: solid 1px var(--border-widget);
+    border-radius: 10px;
+    margin: 10px;
+    color: var(--text-white);
+}
+
+/*borda e fundo ao passar o mouse*/
+#btn-lancamento-investimento:hover{
+    background-color:var(--color-darker-green) ;
+    border: solid 2px var(--color-green);
+}
+#btn-lancamento-despesas:hover{
+    background-color:var(--color-darker-red) ;
+    border: solid 2px var(--color-red);
+}
+#btn-lancamento-emergencia:hover{
+    background-color:var(--color-darker-gold) ;
+    border:solid 2px var(--color-gold);
+}
+#btn-lancamento-lazer:hover{
+    background-color:var(--color-darker-purple) ;
+    border: solid 2px var(--color-purple);
+}
+
+
+/*icon*/
+.icon-lancamento {
+  width: 18px;           
+  height: 18px;
+}
+
+/*cor de icon individual*/
+#icon-investimento{
+    color: var(--color-green) ;
+}
+#icon-despesas{
+    color: var(--color-red) ;
+}
+#icon-emergencia{
+    color: var(--color-gold) ;
+}
+#icon-lazer{
+    color: var(--color-purple);
 }

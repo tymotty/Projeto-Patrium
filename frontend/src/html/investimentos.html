@@ -426,41 +426,36 @@
 <!--------------------------------------------------------------------------------->
 <!-----------------------------------Lancamento------------------------------------>
 <!--------------------------------------------------------------------------------->
-    <!-- Etapa 1: escolher categoria -->
-    <div class="modal-conteudo" data-etapa="1">
+<div class="modal-overlay" id="modal-lancamento">
+    <div class="modal-conteudo">
         <header class="modal-header">
             <div>
-                <h2>Novo Lançamento</h2>
-                <p>escolha o tipo de lançamento</p>
+                <h2 class="titule lancamento">Novo Lançamento</h2>
+                <p class="subtitule lancamento">escolha o tipo de lançamento</p>
             </div>
             <button class="btn-fechar-modal" aria-label="Fechar">✕</button>
         </header>
+
         <div class="modal-opcoes">
-            <button class="opcao-lancamento">...</button>
-            <!-- ...as outras 3... -->
+            <button class="opcao-lancamento"  id="btn-lancamento-investimento">
+                <i data-lucide="diamond" class="icon-lancamento" id="icon-investimento"></i>
+                <span>Investimento</span>
+            </button>
+            <button class="opcao-lancamento"  id="btn-lancamento-despesas">
+                <i data-lucide="target" class="icon-lancamento" id="icon-despesas"></i>
+                <span>Despesas</span>
+            </button>
+            <button class="opcao-lancamento" id="btn-lancamento-emergencia">
+                <i data-lucide="briefcase" class="icon-lancamento" id="icon-emergencia"></i>
+                <span>Emergência</span>
+            </button>
+            <button class="opcao-lancamento" id="btn-lancamento-lazer">
+                <i data-lucide="diamond" class="icon-lancamento" id="icon-lazer"></i>
+                <span>Lazer</span>
+            </button>
         </div>
     </div>
-
-    <!-- Etapa 2: formulário (uma versão pra cada categoria, ou genérica) -->
-    <div class="modal-conteudo" data-etapa="2" style="display: none;">
-        <header class="modal-header">
-            <button class="btn-voltar">← voltar</button>
-            <h2>Despesas</h2>
-            <button class="btn-fechar-modal" aria-label="Fechar">✕</button>
-        </header>
-
-        <span class="tag-categoria">Despesas</span>
-
-        <label class="form-label">Descrição</label>
-        <input type="text" placeholder="Ex: Aporte Despesas" class="form-input">
-
-        <label class="form-label">Valor (R$) *</label>
-        <input type="number" placeholder="0,00" class="form-input">
-
-        <button class="btn-confirmar">Confirmar gasto</button>
-    </div>
 </div>
-
 </main>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script>lucide.createIcons();</script>
